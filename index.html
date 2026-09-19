@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2563eb">
+  <title>College Enquiry Chatbot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="bot-icon">🤖</div>
+        <div>
+          <h1>College Enquiry</h1>
+          <p><span class="status-dot"></span> Chatbot is online</p>
+        </div>
+      </div>
+      <button class="info-btn" onclick="showAbout()" aria-label="About chatbot">i</button>
+    </header>
+
+    <section class="hero">
+      <div class="hero-icon">👋</div>
+      <h2>Hello! Welcome</h2>
+      <p>I can help you with courses, admissions, fees, timings, exams, facilities and contact information.</p>
+    </section>
+
+    <section class="quick-section">
+      <p class="section-title">Quick questions</p>
+      <div class="quick-buttons">
+        <button onclick="askQuestion('What courses are available?')">📚 Courses</button>
+        <button onclick="askQuestion('What are the college timings?')">🕘 Timings</button>
+        <button onclick="askQuestion('What is the admission process?')">📝 Admission</button>
+        <button onclick="askQuestion('What facilities are available?')">🏫 Facilities</button>
+      </div>
+    </section>
+
+    <section id="chatBox" class="chat-box" aria-live="polite">
+      <div class="message bot">
+        <div class="avatar">🤖</div>
+        <div class="bubble">Ask me a question and I will try to help you.</div>
+      </div>
+    </section>
+
+    <div class="typing" id="typing">Chatbot is typing...</div>
+
+    <footer class="input-area">
+      <input id="question" type="text" placeholder="Type your question..." autocomplete="off">
+      <button id="sendBtn" onclick="sendMessage()" aria-label="Send message">➤</button>
+    </footer>
+
+    <a class="admin-link" href="admin.html">Admin / FAQ Manager</a>
+  </main>
+
+  <div id="aboutModal" class="modal hidden">
+    <div class="modal-card">
+      <button class="close" onclick="closeAbout()">×</button>
+      <h2>College Enquiry Chatbot</h2>
+      <p>A BCA 5th Semester mini project using HTML, CSS and JavaScript.</p>
+      <p>This GitHub Pages version works without Python or Flask.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
