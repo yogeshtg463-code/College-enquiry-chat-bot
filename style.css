@@ -1,0 +1,116 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+.chat-container {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.header {
+    background: #2563eb;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 { margin: 0 0 8px; }
+
+.chat-box {
+    height: 450px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.bot-message, .user-message {
+    max-width: 75%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.bot-message {
+    background: #e5e7eb;
+    margin-right: auto;
+}
+
+.user-message {
+    background: #2563eb;
+    color: white;
+    margin-left: auto;
+}
+
+.input-area {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+button {
+    margin-left: 10px;
+    padding: 12px 20px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover { background: #1d4ed8; }
+
+.admin-link {
+    text-align: center;
+    padding: 15px;
+}
+
+.admin-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.admin-container input,
+.admin-container textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.admin-container textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.faq {
+    padding: 15px;
+    margin: 10px 0;
+    background: #f3f4f6;
+    border-radius: 5px;
+}
+
+a { color: #2563eb; }

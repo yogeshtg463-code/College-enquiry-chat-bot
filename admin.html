@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="admin-container">
+    <h1>College Enquiry - Admin Panel</h1>
+
+    <h2>Add Question and Answer</h2>
+    <form action="/admin/add" method="POST">
+        <input type="text" name="question"
+               placeholder="Enter question" required>
+        <textarea name="answer"
+                  placeholder="Enter answer" required></textarea>
+        <button type="submit">Add FAQ</button>
+    </form>
+
+    <hr>
+
+    <h2>Existing Questions</h2>
+    {% for faq in faqs %}
+    <div class="faq">
+        <h3>{{ faq["question"] }}</h3>
+        <p>{{ faq["answer"] }}</p>
+        <a href="/admin/delete/{{ faq['id'] }}"
+           onclick="return confirm('Delete this FAQ?')">Delete</a>
+    </div>
+    {% else %}
+    <p>No FAQs available.</p>
+    {% endfor %}
+
+    <br>
+    <a href="/">Back to Chatbot</a>
+</div>
+</body>
+</html>
