@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="description" content="College enquiry assistant for course, admission and student information at The National College, Jayanagar.">
+  <title>College Enquiry Assistant | The National College, Jayanagar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="bot-icon" aria-hidden="true">🎓</div>
+        <div>
+          <p class="institution-name">THE NATIONAL COLLEGE, JAYANAGAR</p>
+          <h1>College Enquiry</h1>
+          <p class="online-line"><span class="status-dot"></span> Enquiry assistant available</p>
+        </div>
+      </div>
+      <button class="info-btn" onclick="showAbout()" aria-label="About this chatbot">i</button>
+    </header>
+
+    <section class="hero">
+      <div class="hero-icon" aria-hidden="true">👋</div>
+      <p class="eyebrow">STUDENT INFORMATION DESK</p>
+      <h2>Welcome to College Enquiry</h2>
+      <p>Ask about courses, BCA subjects, eligibility, admission procedures, fees, examinations and campus facilities.</p>
+      <p class="notice"><strong>Please note:</strong> This is a student project. Confirm official eligibility, fees, dates and regulations with the college office.</p>
+    </section>
+
+    <section class="quick-section" aria-labelledby="quick-title">
+      <p class="section-title" id="quick-title">Popular enquiries</p>
+      <div class="quick-buttons">
+        <button onclick="askQuestion('What courses are available?')">📚 Courses</button>
+        <button onclick="askQuestion('Tell me about BCA')">💻 BCA details</button>
+        <button onclick="askQuestion('Tell me about BBA')">📈 BBA details</button>
+        <button onclick="askQuestion('Tell me about B.Com')">📊 B.Com details</button>
+        <button onclick="askQuestion('Tell me about B.Sc')">🔬 B.Sc details</button>
+        <button onclick="askQuestion('Tell me about BA')">📖 BA details</button>
+        <button onclick="askQuestion('What is the BCA eligibility?')">🎓 Eligibility</button>
+        <button onclick="askQuestion('What is the admission process?')">📝 Admission</button>
+        <button onclick="askQuestion('What is the fee structure?')">💳 Fees</button>
+        <button onclick="askQuestion('What facilities are available?')">🏫 Facilities</button>
+      </div>
+    </section>
+
+    <section id="chatBox" class="chat-box" aria-label="Conversation" aria-live="polite">
+      <div class="message bot">
+        <div class="avatar" aria-hidden="true">🎓</div>
+        <div class="bubble">Welcome! I can help with general college enquiries. Ask about BCA, BBA, B.Com, B.Sc or BA, including course overviews, subjects, duration, eligibility, admission guidance and career options. Course availability and official rules must be confirmed with the college.</div>
+      </div>
+    </section>
+
+    <div class="typing" id="typing" role="status">Preparing an answer…</div>
+
+    <form class="input-area" id="chatForm">
+      <label class="sr-only" for="question">Type your question</label>
+      <input id="question" type="text" placeholder="Type your question…" autocomplete="off" maxlength="500" required>
+      <button id="sendBtn" type="submit" aria-label="Send message">➤</button>
+    </form>
+    <footer class="app-footer">
+      <span>College Enquiry Assistant</span>
+      <a href="admin.html">FAQ Manager / Project Notes</a>
+    </footer>
+  </main>
+
+  <div id="aboutModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <div class="modal-card">
+      <button class="close" onclick="closeAbout()" aria-label="Close information">×</button>
+      <p class="eyebrow">ABOUT THIS PROJECT</p>
+      <h2 id="aboutTitle">College Enquiry Assistant</h2>
+      <p>A browser-based college enquiry mini project built with HTML, CSS and JavaScript.</p>
+      <p>The assistant uses a local FAQ knowledge base. It does not connect to a live college database, and answers are not a substitute for official college notices.</p>
+      <button class="secondary-button" onclick="closeAbout()">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

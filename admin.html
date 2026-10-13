@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2563eb">
+  <title>FAQ Manager | College Enquiry Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="bot-icon" aria-hidden="true">⚙️</div>
+        <div>
+          <p class="institution-name">THE NATIONAL COLLEGE, JAYANAGAR</p>
+          <h1>FAQ Manager</h1>
+          <p class="online-line">Knowledge base and project notes</p>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <p class="eyebrow">PROJECT ADMINISTRATION</p>
+      <h2>Maintain accurate student information</h2>
+      <p>Chatbot answers are maintained in <strong>script.js</strong>. Update them only after confirming details from an official college or university source.</p>
+      <p class="notice"><strong>Technical note:</strong> This is a static GitHub Pages project. This page does not save changes to the live website or provide an authenticated administrator login.</p>
+    </section>
+    <section class="admin-content">
+      <h2>Current knowledge-base coverage</h2>
+      <ul>
+        <li>BCA overview and general subject areas</li>
+        <li>BCA eligibility and duration guidance</li>
+        <li>BCA programming topics and career pathways</li>
+        <li>General course list from the original sample FAQ</li>
+        <li>Admissions, fees, timings, facilities, examinations and contact guidance</li>
+      </ul>
+      <h3>How to update an answer</h3>
+      <ol>
+        <li>Open <code>script.js</code> in a code editor such as VS Code.</li>
+        <li>Find the relevant item in the <code>faqData</code> array by its <code>id</code>.</li>
+        <li>Update the <code>keywords</code> and <code>answer</code> fields using verified information.</li>
+        <li>Save the file and test typical student questions in <code>index.html</code>.</li>
+        <li>Commit and push the updated files to the GitHub repository to publish the changes.</li>
+      </ol>
+      <h3>Example FAQ structure</h3>
+      <pre><code>{
+  id: "sample-topic",
+  keywords: ["sample question", "another way to ask"],
+  answer: "Insert the verified answer here."
+}</code></pre>
+      <h3>Information still requiring official confirmation</h3>
+      <p>The current verified-source set does not include the college's latest course prospectus, course-wise eligibility, semester syllabus, fee schedule, admission dates, office hours, official contact details or complete facilities list. These fields are deliberately not presented as confirmed facts.</p>
+      <a class="back-link" href="index.html">← Return to College Enquiry Assistant</a>
+    </section>
+  </main>
+</body>
+</html>
